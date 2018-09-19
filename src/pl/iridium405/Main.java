@@ -17,8 +17,24 @@ public class Main {
         sort.bubbleSortDesc(tab2);
 
 
-        System.out.println(Singleton.getInstance().hashCode());
-        System.out.println(Singleton.getInstance().hashCode());
+        Thread thread1 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Singleton instance1 = Singleton.getInstance();
+                System.out.println("Instance 1: " + instance1.hashCode());
+            }
+        });
+
+        Thread thread2 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Singleton instance2 = Singleton.getInstance();
+                System.out.println("Instance 1: " + instance2.hashCode());
+            }
+        });
+
+        thread1.start();
+        thread2.start();
 
     }
 }
