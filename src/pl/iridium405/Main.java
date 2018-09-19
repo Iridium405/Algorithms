@@ -1,6 +1,7 @@
 package pl.iridium405;
 
 import pl.iridium405.algorithms.BubbleSort;
+import pl.iridium405.design_patterns.Singleton;
 
 public class Main {
 
@@ -14,5 +15,10 @@ public class Main {
         sort.bubbleSortAsc(tab);
         System.out.println("----------");
         sort.bubbleSortDesc(tab2);
+
+
+        System.out.println(Singleton.getInstance().hashCode());
+        System.out.println(Singleton.getInstance().hashCode());
+
     }
 }
