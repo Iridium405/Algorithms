@@ -1,4 +1,4 @@
-package pl.iridium405.design_patterns;
+package pl.iridium405.design_patterns.singleton;
 
 public class Singleton {
 
