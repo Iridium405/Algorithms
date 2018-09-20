@@ -1,7 +1,9 @@
 package pl.iridium405;
 
 import pl.iridium405.algorithms.BubbleSort;
-import pl.iridium405.design_patterns.Singleton;
+import pl.iridium405.design_patterns.factory.Lifeform;
+import pl.iridium405.design_patterns.factory.LifeformFactory;
+import pl.iridium405.design_patterns.singleton.Singleton;
 
 public class Main {
 
@@ -35,6 +37,16 @@ public class Main {
 
         thread1.start();
         thread2.start();
+
+
+        Lifeform person = LifeformFactory.getForm("Human", 27, 1.85);
+        Lifeform dogo = LifeformFactory.getForm("Dog", 3, 0.70);
+        Lifeform spider = LifeformFactory.getForm("Arachnid", 1, 2.60);
+        Lifeform lizard = LifeformFactory.getForm("Agama", 2, 0.1);
+
+        System.out.println(person.toString());
+        System.out.println(dogo.toString());
+        System.out.println(spider.toString());
 
     }
 }
