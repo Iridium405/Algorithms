@@ -1,12 +1,12 @@
-package pl.iridium405.design_patterns.factory;
+package pl.iridium405.design_patterns.creational.factory;
 
-public class Arachnid extends Lifeform {
+public class Human extends Lifeform {
 
     private String species;
     private int age;
     private double height;
 
-    public Arachnid(String species, int age, double height) {
+    public Human(String species, int age, double height) {
         this.species = species;
         this.age = age;
         this.height = height;

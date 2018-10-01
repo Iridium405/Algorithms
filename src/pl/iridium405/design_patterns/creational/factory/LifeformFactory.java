@@ -1,4 +1,4 @@
-package pl.iridium405.design_patterns.factory;
+package pl.iridium405.design_patterns.creational.factory;
 
 public class LifeformFactory {
 
