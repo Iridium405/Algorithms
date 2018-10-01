@@ -1,9 +1,13 @@
 package pl.iridium405;
 
 import pl.iridium405.algorithms.BubbleSort;
-import pl.iridium405.design_patterns.factory.Lifeform;
-import pl.iridium405.design_patterns.factory.LifeformFactory;
-import pl.iridium405.design_patterns.singleton.Singleton;
+import pl.iridium405.design_patterns.behavioral.strategy.CapitalizeFormatter;
+import pl.iridium405.design_patterns.behavioral.strategy.FormatterContext;
+import pl.iridium405.design_patterns.behavioral.strategy.LowerCaseFormatter;
+import pl.iridium405.design_patterns.behavioral.strategy.UpperCaseFormatter;
+import pl.iridium405.design_patterns.creational.factory.Lifeform;
+import pl.iridium405.design_patterns.creational.factory.LifeformFactory;
+import pl.iridium405.design_patterns.creational.singleton.Singleton;
 
 public class Main {
 
@@ -47,6 +51,21 @@ public class Main {
         System.out.println(person.toString());
         System.out.println(dogo.toString());
         System.out.println(spider.toString());
+
+
+        String text = "str Des Pat";
+        FormatterContext context = new FormatterContext();
+
+        context.setStrategy(new CapitalizeFormatter());
+        context.print(text);
+
+        context.setStrategy(new UpperCaseFormatter());
+        context.print(text);
+
+        context.setStrategy(new LowerCaseFormatter());
+        context.print(text);
+
+
 
     }
 }

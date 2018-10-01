@@ -1,0 +1,10 @@
+package pl.iridium405.design_patterns.behavioral.strategy;
+
+public class CapitalizeFormatter implements TextFormatterStrategy {
+
+
+    @Override
+    public String format(String text) {
+        return text.substring(0,1).toUpperCase() + text.substring(1);
+    }
+}
